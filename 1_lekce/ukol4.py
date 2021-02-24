@@ -55,6 +55,11 @@ morseCode = {
 }
 
 text = input('Zadej text, ktery chces prevest na Morseovu abecedu:')
-for text in morseCode:
-    print('Toto je zneni v Morseove abecede:', [text])
+for i in text:
+    if i == " ":
+        print('/')
+    for key in morseCode:
+        if key == i:
+                print(morseCode[key])
+
 

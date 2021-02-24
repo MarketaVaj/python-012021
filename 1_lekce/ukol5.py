@@ -15,14 +15,15 @@ prodeje2020 = {
     "Vražda podle knihy": 2510,
     "Past": 2364,
     "Zločinný steh": 5412,
-    "Zkus mě chytit": 6671,
+#    "Zkus mě chytit": 6671,
 }
-mojekniha = input('Zadej nazev knihy:')
 prodejcelkem = 0
-for mojekniha in prodeje2019:
-    prodejcelkem [mojekniha] = prodeje2019[mojekniha]
-    for mojekniha in prodeje2020:
-        prodejcelkem [mojekniha] = prodejcelkem + prodeje2020[mojekniha]
-
-print('Bylo prodano ', (prodejcelkem), '.')
+mojekniha = input('Zadej nazev knihy:')
+if mojekniha in prodeje2019:
+    prodejcelkem += prodeje2019[mojekniha]
+    if mojekniha in prodeje2020:
+        prodejcelkem += prodeje2020[mojekniha]
+        print('Bylo prodano ', (prodejcelkem), '.')
+else:
+    print('Zadana kniha neni v nasem seznamu.')
 
