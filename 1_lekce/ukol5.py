@@ -27,3 +27,17 @@ if mojekniha in prodeje2019:
 else:
     print('Zadana kniha neni v nasem seznamu.')
 
+#opravene od Jirky:
+# Tady pozor na vnořenou podmínku. Jsou tam knížky, které jsou jen ve slovníku prodeje2020, ale nejsou ve slovníku prodeje2019. Pokud máš ale druhou podmínku vnořenou do první, tak pro tyto knížky program fungovat nebude. Můžeš mít třeba podmínky samostatně a následně vypsat text o tom, že knížka není na seznamu, pokud má nulové prodeje.
+
+prodejcelkem = 0
+mojekniha = input('Zadej nazev knihy:')
+if mojekniha in prodeje2019:
+    prodejcelkem += prodeje2019[mojekniha]
+if mojekniha in prodeje2020:
+    prodejcelkem += prodeje2020[mojekniha]
+
+if prodejcelkem > 0:
+    print('Bylo prodano ', (prodejcelkem), '.')
+else:
+    print('Zadana kniha neni v nasem seznamu.')

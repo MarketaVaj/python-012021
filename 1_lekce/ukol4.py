@@ -63,3 +63,13 @@ for i in text:
                 print(morseCode[key])
 
 
+#opravena varianta od Jirky:
+text = input('Zadej text, ktery chces prevest na Morseovu abecedu:')
+for i in text:
+    if i == " ":
+        print('/')
+    else:
+        if i in morseCode:
+            print(morseCode[i])
+
+# Úkol funguje, ale nemusíš správné písmeno hledat pomocí cyklu, můžeš použít hranaté závorky pro vyhledání položky ve slovníku podle klíče. Je to tak trochu jednodušší :-)
