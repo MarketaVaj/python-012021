@@ -1,9 +1,3 @@
-# Státy světa podruhé
-# Vrať se ke svému programu, který pracuje se slovníkem s informace o všech státech světa.
-#
-# Tvůj program se uživatele zeptá na region, který ho zajímá. Následně sestav slovník, který bude obsahovat celkové počty obyvatel pro jednotlivé subregiony v daném regionu. Například pokud uživatel zadá Europe, tak by měl být výsledek následující.
-# {'Northern Europe': 104628222, 'Southern Europe': 152182570, 'Western Europe': 194539965, 'Eastern Europe': 295337425}
-
 staty = [
     {'name': 'Afghanistan', 'capital': 'Kabul', 'region': 'Asia', 'subregion': 'Southern Asia', 'population': 27657145,
      'area': 652230.0, 'gini': 27.8},
@@ -495,33 +489,23 @@ staty = [
     {'name': 'Zimbabwe', 'capital': 'Harare', 'region': 'Africa', 'subregion': 'Eastern Africa', 'population': 14240168,
      'area': 390757.0}]
 
-zvolenyregion = input('Jaky region te zajima?')
+#for stat in staty:
+#   print(stat['subregion'])
+
 subregiony = {}
-for item in staty:
-    region = item["region"]
-    population = item["population"]
-    if region == zvolenyregion:
-        subregiony[region] += population
-    else:
-        subregiony[region] = population
+for stat in staty:
+    subregiony[stat['subregion']] = stat['population']
 
 print(subregiony)
 
+zvolenyregion = input('Jaky region te zajima?')
+subregiony = {}
+for stat in staty:
+    if region == zvolenyregion:
+        for item['region'] in staty:
+            subregiony[item['subregion']] = item['population']
+        print(subregiony)
+else:
+    print('Neznamy region.')
 
-# subregiony = {}
-# for stat in staty:
-#     subregiony[stat['subregion']] = stat['population']
-#
-# print(subregiony)
-#
-# zvolenyregion = input('Jaky region te zajima?')
-# subregiony = {}
-# for stat in staty:
-#     if region == zvolenyregion:
-#         for item['region'] in staty:
-#             subregiony[item['subregion']] = item['population']
-#         print(subregiony)
-# else:
-#     print('Neznamy region.')
-#
-# print(subregiony)
+print(subregiony)

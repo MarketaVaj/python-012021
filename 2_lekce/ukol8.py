@@ -15,23 +15,26 @@
 # tel_cislo = tel_cislo.replace(" ", "")
 
 def telefon(tel_cislo):
-    tel_cislo = tel_cislo.replace(" ", "")
-    if len(tel_cislo) = 9:
-        cislo == True
-    if len(tel_cislo) = len 12:
-        cislo == True
-    return cislo
+    if len(tel_cislo) == 9:
+        return True
+    if len(tel_cislo) == 13:
+        return True
+    else:
+        return False
 
-def znenizpravy (zprava):
-    pocetzprav = zprava/180
+
+def znenizpravy(zprava):
+    pocetzprav = len(zprava)//180 + 1
     cenazpravy = pocetzprav * 3
     return  cenazpravy
 
 
 tel_cislo = input('Na jake cislo chcete zpravu zaslat?')
-telefon (tel_cislo)
-if cislo = True:
+cislo = telefon (tel_cislo)
+if cislo == True:
     zprava = input('Jakou zpravu chcete zaslat?')
-    znenizpravy(zprava)
-print('Cena zpravy je '(cenazpravy))
+    cenazpravy = znenizpravy(zprava)
+    print('Cena zpravy je', (cenazpravy), 'Kč.')
+else:
+    print('Špatný formát čísla.')
 
