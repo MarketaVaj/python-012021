@@ -35,4 +35,4 @@ print(petra.get_info())
 # print(get_net_salary)
 
 
-
+úkol 14 mám hotov
