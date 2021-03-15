@@ -35,37 +35,35 @@ class Serial(Polozka):
         super().__init__(nazev, zanr)
         self.pocet_epizod = pocet_epizod
         self.delka_epizody = delka_epizody
-        self.delka_serial = []
+        self.delka_serial = self.delka_epizody * self.pocet_epizod
     def get_info(self):
         return super().get_info() + f"Pocet epizod je {self.pocet_epizod} a delka jedne epizody je {self.delka_epizody}."
-    def get_celkova_serial(self):
-        self.delka_serial =  self.delka_epizody * self.pocet_epizod
-        self.delka_serial.append(self.delka_serial)
 
 class Uzivatel:
     def __init__(self, uzivatelske_jmeno):
         self.uzivatelske_jmeno = uzivatelske_jmeno
-        self.delka_sledovani = [0]
+        self.delka_sledovani = []
     def get_info(self):
         return f"Uživatel/ka se jmenuje {self.uzivatelske_jmeno}"
 
     def assignPolozka(self, polozka):
-        if polozka.delka:
-            self.delka_sledovani.append(self.delka)
-        if polozka.delka_epizody:
-            self.delka_sledovani.append(self.delka_serial)
+        if hasattr(polozka, "delka"):
+            self.delka_sledovani.append(polozka.delka)
+        elif polozka.delka_epizody:
+            self.delka_sledovani.append(polozka.delka_serial)
 
     def delkaSledovani (self):
-        return (self.delka_sledovani)
+        return sum(self.delka_sledovani)
 
 
-prvniserial = Serial("Good doctor", "drama", 18, "40 minut")
-prvnifilm = Film ("Krajina ve stinu", "drama", "3 hodiny")
+prvniserial = Serial("Good doctor", "drama", 18, 40)
+prvnifilm = Film ("Krajina ve stinu", "drama", 180)
 print(prvnifilm.get_info())
 print(prvniserial.get_info())
 
 jana = Uzivatel("Jana")
+jana.assignPolozka(prvniserial)
+jana.assignPolozka(prvnifilm)
 print(jana.get_info())
 print(jana.delkaSledovani())
 
-# nepripocitava to a vypisuje porad nulu, ja vim
