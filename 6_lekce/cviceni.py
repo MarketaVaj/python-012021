@@ -32,9 +32,12 @@ studenti_celkem = pandas.concat([studenti1, stupdenti2], ignore_index=True)
 # print(studenti_celkem.columns)
 # print(studenti_celkem[studenti_celkem['kruh'].isnull()].shape)
 
+print(sum(studenti_celkem["ročník"].isnull()))
+
 #3
 # studenti_celkem =studenti_celkem.dropna()
 # print(studenti_celkem)
+studenti_celkem = studenti_celkem.dropna(subset=["ročník", "kruh"])
 
 #4
 # studenti_celkem=studenti_celkem.dropna()
@@ -43,19 +46,17 @@ studenti_celkem = pandas.concat([studenti1, stupdenti2], ignore_index=True)
 
 #5
 
-# studenti_celkem=studenti_celkem.dropna()
-# print(studenti_celkem.shape)
-# print(studenti_celkem.groupby('obor').count())
 #
 # print(studenti_celkem.groupby("obor")["prospěch"].mean())
 
 #6
-jmena = pandas.read_csv('jmena.csv')
-pandas.merge (studenti_celkem, jmena, on=['jméno'])
-studenti_celkem.shape
-studentiPlusJmena = pandas.merge(studenti_celkem, jmena)
-print(studentiPlusJmena)
-
-#7
-print(studentiPlusJmena.groupby("pohlaví").count())
+# jmena = pandas.read_csv('jmena.csv')
+# pandas.merge (studenti_celkem, jmena, on=['jméno'])
+# studenti_celkem.shape
+# studentiPlusJmena = pandas.merge(studenti_celkem, jmena)
+# print(studentiPlusJmena)
+#
+# #7
+# print(studentiPlusJmena.groupby("pohlaví").count())
+# print(studentiPlusJmena.groupby("pohlaví").size())
 
