@@ -49,7 +49,8 @@ spojenitabulek = pandas.merge(zamestnanci, platy, how="outer")
 print(spojenitabulek)
 uznepracuji = spojenitabulek['plat'].isnull()
 print(uznepracuji)
-
+uznepracuji = spojenitabulek[spojenitabulek['plat'].isnull()]
+print(uznepracuji)
 
 # V rámci úspory se IT oddělení rozhodlo prověřit licence přidělené zaměstnancům, kteří ve firmě již nepracují. Vytvoř samostatnou tabulku, která obsahuje jména zaměstnanců, kteří ve firmě již nepracují. Tabulku ulož do souboru CSV.
 
