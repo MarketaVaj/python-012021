@@ -1,0 +1,39 @@
+cisloStudenta,predmet,znamka,den,místnost,jméno,předmět,známka
+2.0,Dějepis,3.0,pá,u202,,,
+3.0,Matematika,2.0,út,u202,,,
+2.0,Společenské vědy,2.0,pá,u202,,,
+4.0,Biologie,1.0,pá,u202,,,
+5.0,Dějepis,1.0,po,u202,,,
+6.0,Fyzika,2.0,čt,u202,,,
+7.0,Dějepis,4.0,po,u202,,,
+8.0,Matematika,2.0,po,u202,,,
+10.0,Chemie,2.0,st,u202,,,
+3.0,Chemie,5.0,út,u202,,,
+11.0,Matematika,1.0,st,u202,,,
+12.0,Biologie,4.0,st,u202,,,
+10.0,Dějepis,5.0,st,u202,,,
+,,,po,u203,Kateřina Novotná,Společenské vědy,3.0
+,,,po,u203,Arnošt Sas,Matematika,5.0
+,,,po,u203,Vasil Lácha,Informatika,3.0
+,,,st,u203,Lenka Jarošová,Fyzika,3.0
+,,,st,u203,Marie Kortusová,Fyzika,3.0
+,,,pá,u203,Monika Dudysová,Chemie,3.0
+,,,út,u203,Josef Vodseďálek,Informatika,2.0
+,,,po,u203,Alexey Opatrný,Zeměpis,1.0
+,,,po,u203,Antonín Hlídek,Fyzika,4.0
+,,,pá,u203,Monika Dudysová,Společenské vědy,3.0
+,,,čt,u203,Filip Lacina,Fyzika,2.0
+,,,st,u203,Marta Kinclová,Biologie,4.0
+,,,út,u203,Martina Korbářová,Zeměpis,3.0
+,,,po,u302,Petr Tábor,Informatika,1.0
+,,,po,u302,Petr Tábor,Společenské vědy,1.0
+,,,čt,u302,Marie Krejcárková,Matematika,5.0
+,,,pá,u302,Pavel Kysilka,Informatika,1.0
+,,,út,u302,Josef Vodseďálek,Biologie,2.0
+,,,čt,u302,Filip Lacina,Matematika,1.0
+,,,st,u302,Marta Kinclová,Informatika,4.0
+,,,st,u302,Ivana Dvořáková,Chemie,5.0
+,,,st,u302,Marie Kortusová,Dějepis,3.0
+,,,po,u302,Arnošt Sas,Chemie,4.0
+,,,út,u302,Martina Korbářová,Informatika,3.0
+,,,po,u302,Antonín Hlídek,Matematika,3.0
