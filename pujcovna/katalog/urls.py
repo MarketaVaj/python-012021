@@ -4,10 +4,8 @@ from . import views
 
 urlpatterns = [
     path('', views.indexView.as_view(), name='index'),
+    path('seznam/', views.seznamView.as_view(), name='index'),
 ]
 
-urlpatterns = [
-    path('', views.seznamView.as_view(), name='index'),
-]
 
 
