@@ -1,0 +1,25 @@
+<a href="{% url 'index' %}">Index</a>
+
+<h2> Seznam aut je: </h2>
+
+{% for auto in object_list %}
+
+<table>
+  <tr>
+    <td>{{auto.registracniZnacka}}</td>
+  </tr>
+  <tr>
+    <td>{{auto.pocetKilometru}}</td>
+  </tr>
+  <tr>
+    <td>{{auto.datumKontroly}}</td>
+  </tr>
+  <tr>
+    <td>{{auto.znackaTypVozidla}}</td>
+  </tr>
+  <tr>------
+  </tr>
+
+</table>
+
+{% endfor %}

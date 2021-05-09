@@ -1,0 +1,9 @@
+<a href="{% url 'index' %}">Index</a>
+
+<h2>Seznam zakazniku:</h2>
+
+<ul>
+    {% for zakaznik in object_list %}
+    <li>{{zakaznik.jmeno}}, {{zakaznik.prijmeni}}, {{zakaznik.cisloRidicskehoPRukazu}}</li>
+    {% endfor %}
+</ul>

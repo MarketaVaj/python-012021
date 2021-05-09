@@ -19,7 +19,7 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('katalog/', include("katalog.urls")),
+    path('', include("katalog.urls"))
 ]
 
 # !!!!bere se to jenom za celou aplikace ne za jednotlive pohledy!!!!

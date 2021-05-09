@@ -1,0 +1,9 @@
+<a href="{% url 'index' %}">Index</a>
+
+<h2>Seznam vypujcek:</h2>
+
+<ul>
+    {% for vypujcka in object_list %}
+    <li>{{vypujcka.auto}}, {{vypujcka.zacatekVypujcky}}, {{vypujcka.konecVypujcky}}</li>
+    {% endfor %}
+</ul>
